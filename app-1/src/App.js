@@ -1,18 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: ""
+    };
+  }
+  handleChange(val) {
+    this.setState({ name: val });
+  }
+
+  alertMe() {
+    {
+      alert(this.state.name);
+    }
+  }
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <input type="text" onChange={e => this.handleChange(e.target.value)} />
+        <h1>{this.state.name}</h1>
+        <button onClick={() => this.alertMe()}> Click me! </button>
       </div>
     );
   }
