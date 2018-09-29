@@ -19,6 +19,37 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes color {
+  0% {
+    background-color: #222;
+  }
+  50% {
+    background-color: #4285f4;
+  }
+  100 {
+    background-color: #222;
+  }
+}
+
+.inputBox {
+  background-color: white;
+  animation-name: color;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  border: 5px solid skyblue;
+  box-shadow: 10px 10px 5px gray;
+}
+
+.itemInBox {
+  border: 3px none brown;
+  color: white;
+  text-shadow: 2px 2px 5px #000000;
 }
