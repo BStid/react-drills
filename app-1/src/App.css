@@ -19,6 +19,28 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.inputBox {
+  position: fixed;
+  top: 60%;
+  left: 55%;
+  width: 11em;
+  height: 2em;
+  margin-top: -9em;
+  margin-left: -15em;
+  border: 1px solid #ccc;
+  background-color: #f3f3f3;
+}
+
+.input {
+  position: fixed;
+  top: 47%;
+  left: 42%;
 }

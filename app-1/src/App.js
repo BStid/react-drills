@@ -1,28 +1,24 @@
 import React, { Component } from "react";
 import "./App.css";
+import InputBox from "./InputBox";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: ""
+      input: ""
     };
+
+    this.handleChange = this.handleChange.bind(this);
   }
   handleChange(val) {
-    this.setState({ name: val });
-  }
-
-  alertMe() {
-    {
-      alert(this.state.name);
-    }
+    console.log({ input: val });
+    this.setState({ input: val });
   }
   render() {
     return (
-      <div className="App">
-        <input type="text" onChange={e => this.handleChange(e.target.value)} />
-        <h1>{this.state.name}</h1>
-        <button onClick={() => this.alertMe()}> Click me! </button>
+      <div>
+        <InputBox input={this.state.input} change={this.handleChange} />
       </div>
     );
   }
