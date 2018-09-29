@@ -14,7 +14,7 @@ class Login extends Component {
           type="password"
           key="PassWord"
           placeholder="Password"
-          onChange={e => this.props.handleChange("password", e.target.value)}
+          onChange={e => this.props.handleChange("username", e.target.value)}
         />
         <button onClick={this.props.alertMe}> Login </button>
       </div>
